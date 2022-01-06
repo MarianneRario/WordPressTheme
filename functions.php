@@ -7,12 +7,7 @@ function university_files(){
     wp_enqueue_style("university_main_styles", get_stylesheet_uri());
 }
 
-function university_features(){
-    //register menu locations
-    register_nav_menu("headerMenuLocation", "Header Menu Location"); //header
-    register_nav_menu("footerLocation1", "Footer Location One"); //footer 1
-    register_nav_menu("footerLocation2", "Footer Location Two"); //footer 2
-    
+function university_features(){   
     add_theme_support("title-tag");
 }
 
