@@ -10,8 +10,13 @@ function js_file(){
    wp_enqueue_script("js-slider", get_stylesheet_directory_uri() . "/js/scripts-bundled.js", NULL, "1.0", false);
 }
 
+function university_features(){
+    add_theme_support("title-tag");
+}
+
 // call the function
 add_action("wp_enqueue_scripts", "university_files"); 
 add_action("wp_enqueue_scripts", "js_file"); 
+add_action("after_setup_theme", "university_features"); 
 
 ?>
