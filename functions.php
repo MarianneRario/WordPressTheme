@@ -6,7 +6,12 @@ function university_files(){
     wp_enqueue_style("university_main_styles", get_stylesheet_uri());
 }
 
+function js_file(){
+   wp_enqueue_script("js-slider", get_stylesheet_directory_uri() . "/js/scripts-bundled.js", NULL, "1.0", false);
+}
+
 // call the function
-add_action("wp_enqueue_scripts", "university_files");
+add_action("wp_enqueue_scripts", "university_files"); 
+add_action("wp_enqueue_scripts", "js_file"); 
 
 ?>
